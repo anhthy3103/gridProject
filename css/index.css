@@ -1,0 +1,140 @@
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+/* aside: nội dung phụ kế nội dung chính */
+*{ 
+    /* dấu * áp dụng cho tất cả các thẻ thay vì thẻ div */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    /* 1 rem = 16px */
+}
+/* BEGIN HEADER */
+:root{
+    --bgColor: rgb(53,66,74);
+    --mainColor: rgb(232,73,29);
+}
+.header{
+    height: 100px;
+    display: flex;
+    background-color: var(--bgColor);
+    border-bottom: 4px solid orangered;
+}
+.header__logo{
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+.header__logo img{
+    height: 90%;
+}
+.header__navbar{
+    width: 50%;
+}
+.header__navbar ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header__navbar ul li a{
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.header__navbar ul li a.active{
+    color: var(--mainColor);
+}
+.header__navbar ul li a:hover{
+    color: cyan;
+}
+/* END HEADER */
+
+/* BEGIN CAROUSEL */
+.carousel{
+    height: 500px;
+    background-image: url(../img/911340-min.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+/* END CAROUSEL */
+/* BEGIN Newsletter */
+.newsletter{
+    height: 100px;
+    background-color: var(--bgColor);
+    display: flex;
+    padding: 0 10%;
+}
+.newsletter__subscribe{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.newsletter__subscribe h1{
+    font-size: 3rem;
+    color: white;
+}
+.newsletter__email{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.newsletter__email button{
+    background-color: red;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    margin-left: 1.5rem;
+}
+.newsletter__email button:hover{
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+    cursor: pointer;
+    background-color: white;
+
+}
+.newsletter__email input{
+    font-size: 1.5rem;
+    height: 30px;
+}
+.newsletter__email input:focus{
+    background-color: yellowgreen;
+}
+/* END Newsletter */
+/* BEGIN INTRO */
+.intro{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*4 cột, mỗi cột 1fr */
+    grid-template-rows: 300px 300px; 
+    grid-gap: 20px;
+    /* khoảng cách giữa các ô */
+    padding: 2rem 10%;
+}
+.intro__item:nth-child(1){
+    grid-column: 1/span 2;
+    grid-row: 1/span 2;
+    background-color: brown;
+    background-image: url(../img/484776-min.jpg);
+    background-position: center center;
+}
+.intro__item:nth-child(2){
+    grid-column: 3/span 2;
+    background-image: url(../img/915166-min.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.intro__item:nth-child(3){
+    background-image: url(../img/915166-min.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.intro__item:nth-child(4){
+    background-image: url(../img/915166-min.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+/* END INTRO */
